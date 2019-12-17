@@ -1,0 +1,6 @@
+/Documentation/
+flask-app.service
+/test/
+.gitignore
+*.md
+!README.md
