@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.conf
+    depends_on: 
+    - flask-app
+
+  flask-app:
+    container_name: flask_app
+    build: .
+    environment: 
+    - MYSQL_USER=${MYSQL_USER}
+    - MYSQL_PASS=${MYSQL_PASS}
+    - MYSQL_IP=${MYSQL_IP}
+    - SECRET=${SECRET}
+    ports: 
+    - target: 5000
