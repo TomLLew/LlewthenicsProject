@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
+RUN apt-get -y update && apt-get -y upgrade
+
 RUN apt-get install python3-pip -y
 
 COPY . .
