@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN sudo apt-get update -y && sudo apt-get upgrade -y 
+RUN sudo apt-get -y update && sudo apt-get -y upgrade  
 
 RUN apt-get install python3-pip -y
 
