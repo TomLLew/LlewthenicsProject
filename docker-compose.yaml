@@ -15,6 +15,7 @@ services:
     - flask-app
 
   flask-app:
+    image: flask_app:latest
     container_name: flask_app
     build: .
     environment: 
