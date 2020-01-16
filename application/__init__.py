@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:12345678@project.cznpkkkfxeny.eu-west-2.rds.amazonaws.com/llewthenics'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:12345678@project.cznpkkkfxeny.eu-west-2.rds.amazonaws.com/test'
 app.config['SECRET_KEY'] = '0123456789'
 
 db = SQLAlchemy(app)
